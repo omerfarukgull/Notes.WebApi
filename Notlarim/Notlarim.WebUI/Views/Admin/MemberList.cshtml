@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Member>
+@{
+    ViewData["Title"] = "MemberList";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h1 class="m-5 mt-5">Üyeler</h1>
+
+<div class="col-md-12">
+    <div class="table-responsive mt-5 ">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Fotoğraf</th>
+                    <th>İsim Soyisim</th>
+                    <th>Email</th>
+                    <th>Yükleme-Güncelleme Tarihi</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><img src="~/upload/img/@item.MemberImageUrl" width="50" height="" /></td>
+                        <td>@item.Name @item.SurName</td>
+                        <td>@item.Email</td>
+                        <td>@item.CreatDate.ToString("dd.MM.yyyy")</td>
+                        <td>
+                            <a asp-action="MemberDetails" asp-route-memberId="@item.MemberId" class="btn btn-outline-success">Detaylar</a>
+                        </td>
+                        <td>
+                            <form asp-controller="Admin" asp-action="MemeberDelete" method="post">
+                                <input type="hidden" name="memberId" value="@item.MemberId">
+                                <button class='btn btn-outline-danger'>Sil</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

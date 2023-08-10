@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Note>
+@{
+    ViewData["Title"] = "Notlarım - Notlar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 class="m-5 mt-5">Notlarım</h1>
+
+<div class="col-md-12">
+    <a asp-action="NoteAdd" class="btn btn-outline-primary">Note Ekle</a>
+   
+        <div class="col-md-9 mt-3">
+            <div class="alert alert-warning">Notlar Admin Onayladıktan sonra yayınlanacaktır.</div>
+        </div>
+  
+    <div class="table-responsive mt-5 ">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Fotoğraf</th>
+                    <th>Başlık</th>
+                    <th>İçerik</th>
+                    <th>Pdf Link</th>
+                    <th>Yükleme-Güncelleme Tarihi</th>
+                    <th>Not Durum</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><img src="~/upload/img/@item.NoteImgUrl" width="50" height="" /></td>
+                        <td>@item.Title</td>
+                        <td>@item.Content</td>
+                        <td><a href="~/upload/pdf/@item.NotePdfUrl" target="_blank"><img src="~/upload/img/pdf.png" width="50" height="" /></a></td>
+                        <td>@item.CreatDate</td>
+                        <td>
+                            @if (item.IsApproved == true)
+                            {
+                                <span class="badge badge-success">Yayında</span>
+                            }
+                            else if (item.IsApproved == false)
+                            {
+                                <span class="badge badge-danger"> Yayında değil</span>
+                            }
+
+                        </td>
+                        <td>
+                            <a asp-action="NoteDetails" asp-route-noteId="@item.NoteId" class="btn btn-outline-success">Detaylar</a>
+
+                        </td>
+                        <td>
+                            <form asp-controller="Note" asp-action="NoteDelete" method="post">
+                                <input type="hidden" name="noteId" value="@item.NoteId">
+                                <button class='btn btn-outline-danger'>Sil</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                    /*.Substring(0,40)...*/
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

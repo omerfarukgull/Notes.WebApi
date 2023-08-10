@@ -1,0 +1,76 @@
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.deps.json
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.pdb
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.AssemblyReference.cache
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.AssemblyInfoInputs.cache
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.AssemblyInfo.cs
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.CoreCompileInputs.cache
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\refint\Notlarim.Business.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.pdb
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\ref\Notlarim.Business.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Data.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Entities.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Data.pdb
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Entities.pdb
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.CopyComplete
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.deps.json
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Data.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Entities.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Data.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Entities.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.AssemblyReference.cache
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.AssemblyInfoInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.AssemblyInfo.cs
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.CoreCompileInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.CopyComplete
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\refint\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Business\obj\Debug\net6.0\ref\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.deps.json
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.pdb
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Data.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Entities.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Data.pdb
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Entities.pdb
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.AssemblyReference.cache
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.AssemblyInfoInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.AssemblyInfo.cs
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.CoreCompileInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.CopyComplete
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\refint\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.pdb
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Business\obj\Debug\net6.0\ref\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.AssemblyReference.cache
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.AssemblyInfoInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.AssemblyInfo.cs
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.CoreCompileInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\refint\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.deps.json
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Business.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Data.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Entities.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Data.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Entities.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\bin\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\Notlarim.Business.csproj.CopyComplete
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Business\obj\Debug\net6.0\ref\Notlarim.Business.dll

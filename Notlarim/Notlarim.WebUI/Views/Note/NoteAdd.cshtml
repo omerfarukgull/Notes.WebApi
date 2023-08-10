@@ -1,0 +1,50 @@
+﻿@model NoteModel
+@{
+    ViewData["Title"] = "Notlarım - Not Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12 mt-5 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Ders Notu Ekle</h4>
+            <p class="card-description">
+                Lütfen Tüm Alanları Doldurunuz
+            </p>
+            <form asp-controller="Note" asp-action="NoteAdd" method="post" enctype="multipart/form-data" class="forms-sample">
+                <input type="hidden" name="MemberId" value="@Context.Session.GetInt32("userıd")" />
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="Başlık"
+                           required="Gerekli" data-validation-required-message="Lütfen Başlık Giriniz" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Content"></label>
+                    <textarea type="text" asp-for="Content" class="form-control" placeholder="Açıklama"
+                              required="Gerekli" data-validation-required-message="Lütfen Açıklama Giriniz"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="NoteImgUrl"></label>
+                    <input type="hidden" asp-for="NoteImgUrl" />
+                    <input type="file" name="file" required="required" data-validation-required-message="Lütfen Resim Seçiniz" />
+                </div>
+
+                   <div class="form-group">
+                    <label asp-for="NotePdfUrl"></label>
+                    <input type="hidden" asp-for="NotePdfUrl" />
+                    <input type="file" name="pdffile" required="required" data-validation-required-message="Lütfen Pdf Seçiniz" />
+
+                </div>
+
+                <div class="form-group">
+                    <label>Kategori</label>
+                    @Html.DropDownListFor(n=>n.CategoryId,(List<SelectListItem>)ViewBag.categories, new {@class="form-control"})
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Ekle</button>
+                <button class="btn btn-light">İptal</button>
+            </form>
+        </div>
+    </div>
+</div>

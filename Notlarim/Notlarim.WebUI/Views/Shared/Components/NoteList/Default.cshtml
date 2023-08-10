@@ -1,0 +1,48 @@
+﻿@model List<Note>
+
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Son 10 Blog</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> Resim </th>
+                        <th> Baslık </th>
+                        <th> Yazar </th>
+                        <th>Status</th>
+                        <th> Yayınlama Tarihi </th>
+                        <th> Detaylar </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderByDescending(n => n.NoteId).Take(10))
+                    {
+                        <tr>
+                            <td>
+                                <img src="~/img/@item.NoteImgUrl" alt="" />
+                            </td>
+                            <td> @item.Title </td>
+                            <td> Ömer Faruk Gül </td>
+                            <td>
+                               @* @if (item.IsApproved == true)
+                                {
+                                    <label class="badge badge-gradient-success">Yayında</label>
+                                }
+                                else if (item.IsApproved == false)
+                                {
+                                    <label class="badge badge-gradient-danger">Yayında değil</label>
+                                }*@
+                                <label class="badge badge-gradient-success">Yayında</label>
+                            </td>
+                            <td> @item.CreatDate.ToString("MMM d, yyyyy") </td>
+                            <td> <a asp-controller="Admin" asp-action="NoteDetails" asp-route-noteId="@item.NoteId" class="btn btn-gradient-dark btn-fw">Detay</a> </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

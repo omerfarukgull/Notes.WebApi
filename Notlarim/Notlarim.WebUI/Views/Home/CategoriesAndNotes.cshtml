@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Note>
+@{
+    ViewData["Title"] = "Notlarım - Kategori";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="pr-3">Kategoriler</span></h5>
+
+            @await Component.InvokeAsync("CategoryList")
+
+        </div>
+
+        <div class="col-md-9 d-block">
+            <div class="row pb-3">
+                @if (Model.Count() == 0)
+                {
+                    <div class="col-md-9">
+                        <div class="alert alert-info">Kategoriye Ait Ders Notu Bulunamadı</div>
+                    </div>
+                }
+                else
+                {
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-4 text-center mt-3">
+                            <a asp-action="NoteDetails" asp-route-noteId="@item.NoteId" class="text-dark link-dark"><img src="~/upload/img/@item.NoteImgUrl" width="210" height="100"> <br>@item.Title</a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

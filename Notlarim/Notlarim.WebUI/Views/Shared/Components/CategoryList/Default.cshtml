@@ -1,0 +1,11 @@
+﻿
+@model IEnumerable<Category>
+
+<div class="bg-light p-4 mb-30">
+@foreach (var item in Model)
+{
+        <div class="List-group d-flex align-items-center justify-content-between mb-3">
+            <a class="text-dark active" asp-controller="Home" asp-action="CategoriesAndNotes" asp-route-categoryId="@item.CategoryId"> <label class="label">@item.CategoryName</label></a>
+        </div>
+}
+</div>

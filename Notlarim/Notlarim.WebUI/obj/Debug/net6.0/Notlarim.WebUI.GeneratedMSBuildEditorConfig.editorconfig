@@ -1,0 +1,161 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Notlarim.WebUI
+build_property.RootNamespace = Notlarim.WebUI
+build_property.ProjectDir = C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.WebUI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.WebUI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Account/UserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Account/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/CategoryAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2F0ZWdvcnlBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/CategoryDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2F0ZWdvcnlEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/CategoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/MailList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/MailSend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFpbFNlbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/MemberDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVtYmVyRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/MemberList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVtYmVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/NoteDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTm90ZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/NoteList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTm90ZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/CategoriesAndNotes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXRlZ29yaWVzQW5kTm90ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/NoteDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/NoteList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Login/MemberAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTWVtYmVyQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Note/NoteAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxOb3RlQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Note/NoteDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxOb3RlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Note/NoteList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxOb3RlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/CategoryCount/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlDb3VudFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/CategoryList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlMaXN0XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/MailCount/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWFpbENvdW50XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/MemberCount/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVtYmVyQ291bnRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/NoteCount/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTm90ZUNvdW50XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/NoteIsApprovedCount/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTm90ZUlzQXBwcm92ZWRDb3VudFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/NoteIsNotApprovedCount/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTm90ZUlzTm90QXBwcm92ZWRDb3VudFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/NoteList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTm90ZUxpc3RcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/_Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mmxjdz7ow1

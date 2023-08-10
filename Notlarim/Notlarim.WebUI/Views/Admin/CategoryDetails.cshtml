@@ -1,0 +1,30 @@
+﻿@model CategoryModel
+
+@{
+    ViewData["Title"] = "CategoryDetails";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Kategory Düzenle</h4>
+            <p class="card-description">
+            </p>
+            <form asp-action="CategoryDetails" method="post">
+                <input name="CategoryId" type="hidden" class="form-control" value="@Model.CategoryId">
+                <div class="form-group">
+                    <label asp-for="CategoryName" class="control-label"></label>
+                    <input asp-for="CategoryName" class="form-control" placeholder="Kategori"
+                           required="Gerekli" data-validation-required-message="Lütfen Başlık Giriniz" />
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                <button class="btn btn-light">İptal</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

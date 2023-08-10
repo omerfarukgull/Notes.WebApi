@@ -1,0 +1,110 @@
+﻿@{
+    // Kullanıcının giriş yapmış olup olmadığını kontrol ediyoruz
+    bool isLoggedIn = Context.Session.GetString("usermail") != null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Notlarim.WebUI</title>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Notlarim.WebUI.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark sticky-top bg-light flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" style="text-transform:uppercase" asp-action="Index">Ders Notlarım</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                @if (isLoggedIn)
+                {
+                    <div class="d-flex justify-content-between">
+                        <a class="nav-link text-dark ">
+                            <img src="~/upload/img/@Context.Session.GetString("userphoto")" class="yuvarlak"> @Context.Session.GetString("username")
+                        </a>
+                       
+                        <a asp-controller="Account" asp-action="LogOut" class="nav-link text-dark mt-1 ml-3">
+                            <img src="~/upload/img/enter.png" width="15" height="15"> Çıkış Yap
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="justify-content-end ml-auto">
+                        <a asp-controller="Login" asp-action="Login" class="text-dark"><img src="~/upload/img/enter.png" width="15" height="15" >Giriş Yap</a>
+                    </div>
+
+                }
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="sidebar-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="Index">
+                                <span><i class=" fas fa-sharp fa-regular fa-house" style="color: #d82c4e;"></i></span>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="NoteList">
+                                <span ><i class="fas fa-sticky-note" style="color: #d82c4e;"></i></span>
+                                Notlar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="MemberList">
+                                <span><i class="fas fa-users" style="color: #d82c4e;"></i></span>
+                                Üyeler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="CategoryList">
+                                <span><i class="fas fa-th-list" style="color: #d82c4e;"></i></span>
+                                Kategoriler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="MailList">
+                                <span><i class="fas fa-envelope" style="color: #d82c4e;"></i></span>
+                              
+                                Mesajlar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="dashboard.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

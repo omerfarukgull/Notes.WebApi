@@ -1,0 +1,76 @@
+﻿@model MemberModel
+@{
+    ViewData["Title"] = "Notlarım - Profilim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12 mt-5 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Profil Düzenle</h4>
+            <p class="card-description">
+            </p>
+            <form asp-controller="Account" asp-action="UserDetails" method="post" enctype="multipart/form-data" class="forms-sample">
+                <input name="MemberId" type="hidden" class="form-control" value="@Model.MemberId">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input type="text" asp-for="Name" class="form-control" placeholder="İsim"
+                           required="Gerekli" data-validation-required-message="Lütfen İsim Giriniz" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SurName"></label>
+                    <input type="text" asp-for="SurName" class="form-control" placeholder="Soyisim"
+                           required="Gerekli" data-validation-required-message="Lütfen Soyisim Giriniz" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input type="text" asp-for="Email" class="form-control" placeholder="Email"
+                           required="Gerekli" data-validation-required-message="Lütfen Email Giriniz" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input type="text" asp-for="Password" class="form-control" placeholder="Şifre"
+                           required="Gerekli" data-validation-required-message="Lütfen Şifre Giriniz" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber"></label>
+                    <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Telefon ((xxx) xxx xx xx)"
+                           required="Gerekli" data-validation-required-message="Lütfen Telefon Numarası Giriniz" />
+                </div> 
+                <div class="form-group">
+                    <label asp-for="University"></label>
+                    <input type="text" asp-for="University" class="form-control" placeholder="Universiti"
+                           required="Gerekli" data-validation-required-message="Lütfen Universite Adı Giriniz" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Department"></label>
+                    <input type="text" asp-for="Department" class="form-control" placeholder="Bölüm"
+                           required="Gerekli" data-validation-required-message="Lütfen Bölüm Adı Giriniz" />
+                </div>
+                <div class="form-group">
+                    <input type="hidden" asp-for="MemberImageUrl" />
+                    <img src="~/upload/img/@Model.MemberImageUrl" width="100" />
+                    <input type="file" asp-for="MemberImageUrl" name="file" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Gender"></label>
+                    <select asp-for="Gender" selected="@Model.Gender" class="form-control" required>
+                        <option value="kadın">Kadın</option>
+                        <option value="erkek">Erkek</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    
+                    <input type="hidden" asp-for="UserStatu" class="form-control" value="@Model.UserStatu" />
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                <button class="btn btn-light">İptal</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

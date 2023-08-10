@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notlarim.Entities", "Notlarim.Entities\Notlarim.Entities.csproj", "{2D78F80F-0E80-48E8-91AE-70A5B15D5036}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notlarim.Data", "Notlarim.Data\Notlarim.Data.csproj", "{FB316E8A-CF7D-4973-8C18-AE798F33B263}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notlarim.Business", "Notlarim.Business\Notlarim.Business.csproj", "{29DC051A-9C17-4B0B-A5F6-E5041ABDB5A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notlarim.WebUI", "Notlarim.WebUI\Notlarim.WebUI.csproj", "{31AD494F-96B3-4988-9126-99C1EDBD9B83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notlarim.Core", "Notlarim.Core\Notlarim.Core.csproj", "{639B8A65-BF29-408C-8C4C-3C2F8E66B8B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notlarim.WebApi", "Notlarim.WebApi\Notlarim.WebApi.csproj", "{2922567B-DDB4-4D9A-AD4C-2994C98A64C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D78F80F-0E80-48E8-91AE-70A5B15D5036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D78F80F-0E80-48E8-91AE-70A5B15D5036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D78F80F-0E80-48E8-91AE-70A5B15D5036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D78F80F-0E80-48E8-91AE-70A5B15D5036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB316E8A-CF7D-4973-8C18-AE798F33B263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB316E8A-CF7D-4973-8C18-AE798F33B263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB316E8A-CF7D-4973-8C18-AE798F33B263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB316E8A-CF7D-4973-8C18-AE798F33B263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29DC051A-9C17-4B0B-A5F6-E5041ABDB5A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29DC051A-9C17-4B0B-A5F6-E5041ABDB5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29DC051A-9C17-4B0B-A5F6-E5041ABDB5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29DC051A-9C17-4B0B-A5F6-E5041ABDB5A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AD494F-96B3-4988-9126-99C1EDBD9B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AD494F-96B3-4988-9126-99C1EDBD9B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AD494F-96B3-4988-9126-99C1EDBD9B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AD494F-96B3-4988-9126-99C1EDBD9B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639B8A65-BF29-408C-8C4C-3C2F8E66B8B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639B8A65-BF29-408C-8C4C-3C2F8E66B8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639B8A65-BF29-408C-8C4C-3C2F8E66B8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639B8A65-BF29-408C-8C4C-3C2F8E66B8B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2922567B-DDB4-4D9A-AD4C-2994C98A64C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2922567B-DDB4-4D9A-AD4C-2994C98A64C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2922567B-DDB4-4D9A-AD4C-2994C98A64C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2922567B-DDB4-4D9A-AD4C-2994C98A64C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D017CFC2-B7A6-45F0-A3CF-E90593320977}
+	EndGlobalSection
+EndGlobal

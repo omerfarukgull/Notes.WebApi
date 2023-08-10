@@ -1,0 +1,63 @@
+﻿
+@model MailRequest
+@{
+    ViewData["Title"] = "MailSend";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mesaj Detay</h4>
+                <form class="forms-sample">
+                    <input type="hidden" name="MessagesId" value="@Model.MessagesId">
+                    <div class="form-group">
+                        <label>İsim</label>
+                        <input asp-for=Name value="@Model.Name" type="text" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input asp-for=Email value="@Model.Email" type="text" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Konu</label>
+                        <input asp-for=Title value="@Model.Title" type="text" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Mesaj</label>
+                        <textarea asp-for=Message value="@Model.Message" type="text" class="form-control" readonly></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mesaj Gönder</h4>
+                <form asp-controller="Admin" asp-action="MailSend" method="post" class="forms-sample">
+                    <input type="hidden" name="MessagesId" value="@Model.MessagesId">
+                    <div class="form-group">
+                        <label>Alıcı Mail</label>
+                        <input asp-for=@Model.Email value="@Model.Email" type="text" readonly class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Gönderen</label>
+                        <input asp-for="AnswerName" value="@Context.Session.GetString("username")" type="text" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Konu</label>
+                        <input asp-for="AnswerTitle" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Mesaj</label>
+                        <textarea asp-for=AnswerMessage class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Mail Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

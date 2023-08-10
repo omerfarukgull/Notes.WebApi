@@ -1,0 +1,48 @@
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.deps.json
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.csproj.AssemblyReference.cache
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.AssemblyInfoInputs.cache
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.AssemblyInfo.cs
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.csproj.CoreCompileInputs.cache
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\refint\Notlarim.Core.dll
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\Desktop\Notlarim\Notlarim.Core\obj\Debug\net6.0\ref\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.deps.json
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.csproj.AssemblyReference.cache
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.AssemblyInfoInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.AssemblyInfo.cs
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.csproj.CoreCompileInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\refint\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.Core\obj\Debug\net6.0\ref\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.deps.json
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.csproj.AssemblyReference.cache
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.AssemblyInfoInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.AssemblyInfo.cs
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.csproj.CoreCompileInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\refint\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\ÖmerFarukGül\ÖmerFarukGül\Notlarim\Notlarim.Core\obj\Debug\net6.0\ref\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.deps.json
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\bin\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.csproj.AssemblyReference.cache
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.AssemblyInfoInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.AssemblyInfo.cs
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.csproj.CoreCompileInputs.cache
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\refint\Notlarim.Core.dll
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\Notlarim.Core.pdb
+C:\Users\omerf\OneDrive\Masaüstü\Anlık Yedek\Notlarim\Notlarim.Core\obj\Debug\net6.0\ref\Notlarim.Core.dll

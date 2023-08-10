@@ -1,0 +1,107 @@
+a {
+    text-decoration: none;
+}
+
+.site-navbar {
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: #f8f9fa;
+}
+
+    .site-navbar .menu-link .menu-a {
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        font-size: small;
+    }
+
+    .site-navbar .menu-link :hover {
+        color: cornflowerblue;
+    }
+
+.jumbotron .jum-h1 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.jumbotron p {
+    color: rgb(71, 70, 70);
+    font-size: xx-large;
+}
+
+.jum-img {
+    background-image: url('../upload/img/jum.png');
+    background-size: cover;
+    height: 472px;
+}
+
+.not-link a {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 20px;
+}
+
+img.yuvarlak {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+.order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg,#FF5370,#ff869a);
+}
+.bg-c-danger {
+    background: linear-gradient(45deg,#dc3545,#df7c85);
+}
+.bg-c-info {
+    background: linear-gradient(45deg,#17a2b8,#5bd1e4);
+}
+.bg-c-primary {
+    background: linear-gradient(45deg,#007bff,#65afff);
+}
+
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+    .card .card-block {
+        padding: 25px;
+    }
+
+.order-card i {
+    font-size: 26px;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}

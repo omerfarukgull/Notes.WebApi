@@ -1,0 +1,126 @@
+﻿@model List<Note>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div class="page-header mt-5">
+    <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <span></span>Genel Bakış <i class="mdi mdi-alert-circle-outline icon-sm text-warning align-middle"></i>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-blue order-card">
+            <div class="card-block">
+                <h6 class="m-b-20"> <i class="fas fa-sticky-note fa-lg" style="color: #ffffff;"></i>&nbsp &nbsp Notlar</h6>
+              
+                <p style="margin-left:50px;" class="m-b-0">Toplam @await Component.InvokeAsync("NoteCount")</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-green order-card">
+            <div class="card-block">
+                <h6 class="m-b-20"><i class="fas fa-check-circle fa-lg" style="color: #ffffff;"></i>&nbsp &nbsp Onaylı Notlar</h6>
+             
+                <p style="margin-left:50px;" class="m-b-0">Toplam @await Component.InvokeAsync("NoteIsApprovedCount")</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-yellow order-card">
+            <div class="card-block">
+                <h6 class="m-b-20"><i class="fas fa-times-circle fa-lg" style="color: #ffffff;"></i>&nbsp &nbsp Onaylanmayan Notlar</h6>
+                <p style="margin-left:50px;" class="m-b-0">Toplam @await Component.InvokeAsync("NoteIsNotApprovedCount")</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-info order-card">
+            <div class="card-block">
+                <h6 class="m-b-20"><i class="fas fa-users" style="color: #ffffff;"></i>&nbsp &nbsp Üyeler</h6>
+                <p style="margin-left:50px;" class="m-b-0">Toplam @await Component.InvokeAsync("MemberCount")</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-pink order-card">
+            <div class="card-block">
+                <h6 class="m-b-20"><i class="fas fa-th-list fa-lg" style="color: #ffffff;"></i>&nbsp &nbsp Kategoriler</h6>
+               
+                <p style="margin-left:50px;" class="m-b-0">Toplam @await Component.InvokeAsync("CategoryCount")</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xl-3">
+        <div class="card bg-c-danger order-card">
+            <div class="card-block">
+                <h6 class="m-b-20"><i class="fas fa-envelope fa-lg" style="color: #ffffff;"></i>&nbsp &nbsp Mesajlar</h6>
+
+                <p style="margin-left:50px;" class="m-b-0">Toplam @await Component.InvokeAsync("MailCount")</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Son 10 Blog</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th> Resim </th>
+                                <th> Baslık </th>
+                                <th> Kategori </th>
+                                <th> Yazar </th>
+                                <th>Not Durum</th>
+                                <th> Yayınlama Tarihi </th>
+                                <th> Detaylar </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.OrderByDescending(b => b.NoteId).Take(10))
+                            {
+                                <tr>
+                                    <td>
+                                        <img src="~/upload/img/@item.NoteImgUrl" width="50" height="50" alt="" />
+                                    </td>
+                                    <td> @item.Title </td>
+                                    <td> @item.Category.CategoryName </td>
+                                    <td> @item.Member.Name @item.Member.SurName </td>
+                                    <td>
+                                        @if (item.IsApproved == true)
+                                        {
+                                            <span class="badge badge-success">Yayında</span>
+                                        }
+                                        else if (item.IsApproved == false)
+                                        {
+                                            <span class="badge badge-danger"> Yayında değil</span>
+                                        }
+
+                                    </td>
+                                    <td> @item.CreatDate.ToString("MMM d, yyyyy") </td>
+                                    <td> <a asp-controller="Admin" asp-action="NoteDetails" asp-route-noteId="@item.NoteId" class="btn btn-outline-success btn-fw">Detay</a> </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

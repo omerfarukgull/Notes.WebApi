@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "CategoryList";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<h1 class="m-5">Kategoriler</h1>
+
+
+
+<div class="col-md-12">
+    <a asp-controller="Admin" asp-action="CategoryAdd" class="btn btn-outline-primary">Kategori Ekle</a>
+    <div class="table-responsive mt-5 ">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Kategori Id</th>
+                    <th>Kategori Adı</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CategoryId</td>
+                        <td>@item.CategoryName</td>
+                        <td>
+                            <a asp-controller="Admin" asp-action="CategoryDetails" asp-route-categoryId="@item.CategoryId" class="btn btn-outline-success">Detaylar</a>
+                            <form asp-controller="Admin" asp-action="CategoryDelete" class="d-inline" method="post">
+                                <input type="hidden" name="categoryId" value="@item.CategoryId">
+                                <button class='btn btn-outline-danger'>Sil</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
