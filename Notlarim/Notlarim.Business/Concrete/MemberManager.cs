@@ -43,6 +43,11 @@ namespace Notlarim.Business.Concrete
             return await _memberRepository.Get(m => m.MemberId == id);
         }
 
+        public async Task<Member> GetByIdUserProfile(int id)
+        {
+            return await _memberRepository.GetByIdUserProfile(id);
+        }
+
         public Member LoginUser(string mail, string password)
         {
             return _memberRepository.LoginUser(mail, password);

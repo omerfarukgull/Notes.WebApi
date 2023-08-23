@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Notlarim.Business.Abstract;
 using Notlarim.Entities;
 using Notlarim.WebUI.Models;
@@ -7,42 +6,26 @@ using System.Net.Mail;
 using System.Net;
 using MyBlog.Entities.Concrete;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft.Json;
+using static Azure.Core.HttpHeader;
+using NuGet.Packaging.Signing;
+using System.Text;
 
 namespace Notlarim.WebUI.Controllers
 {
     [AllowAnonymous]
     public class HomeController : Controller
     {
+        //Tüm İşleler Api Üzerinde Gerçekleştirilmektedir.
+
         private INoteService _noteService;
-        private  IMessageService _messageService;
+        private IMessageService _messageService;
         public HomeController(INoteService noteService, IMessageService messageService)
         {
             _noteService = noteService;
             _messageService = messageService;
         }
 
-        // Anasayfa da Notları Listelem
-        public async Task<IActionResult> NoteList()
-        {
-            var noteList = await _noteService.GetAllIsApproved();
-            return View(noteList);
-        }
-
-        // Not' un detay sayfası 
-        public async Task<IActionResult> NoteDetails(int noteId)
-        {
-            Note note = await _noteService.GetNoteDetails(noteId);
-            return View(note);
-        }
-
-        // Üniversite Derst Notları Sayfasıda seilen kategoriye göre notları getirme getirme
-        public async Task<IActionResult> CategoriesAndNotes(int categoryId)
-        {
-            var noteList = await _noteService.GetByCategory(categoryId);
-            return View(noteList);
-        }
-
-        // Hakımızda Sayfası
         public IActionResult About()
         {
             return View();
@@ -55,59 +38,99 @@ namespace Notlarim.WebUI.Controllers
             return View();
         }
 
-        //İletişim Mail gönderme
-        [HttpPost]
-        public IActionResult Contact(Messages model)
+        #region Web Api
+        // Anasayfa da api üzerinden Notları Listelem
+        public async Task<IActionResult> GetNoteFromRestApi()
         {
-            try
+            var notes = new List<Note>();
+            using (var httpClient = new HttpClient())
             {
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Burası aynı kalacak
-                client.Credentials = new NetworkCredential("myblogtest10@gmail.com", "zluzmiyidfhlfxzn"); //Buraya Kendi gmail ve şifre yaz
-                client.EnableSsl = true;
-                MailMessage msj = new MailMessage();
-                msj.From = new MailAddress(model.Email, model.Name); //iletişim kısmında girilecek mail buaraya gelecektir
-                msj.To.Add("myblogtest10@gmail.com"); //Buraya kendi mail adresimizi yazıyoruz
-                msj.Subject = model.Title + "" + model.Email; //Buraya iletişim sayfasında gelecek konu ve mail adresini mail içeriğine yazacaktır
-                msj.Body = model.Message; //Mail içeriği burada aktarılacakır
-                client.Send(msj); //Clien sent kısmında gönderme işlemi gerçeklecektir.
-                //Bu kısımdan itibaren sizden kullanıcıya gidecek mail bilgisidir 
-                MailMessage msj1 = new MailMessage();
-                msj1.From = new MailAddress("myblogtest10@gmail.com", "Admin");
-                msj1.To.Add(model.Email); //Buraua iletişim sayfasında gelecek mail adresi gelecktir.
-                msj1.Subject = "Mail'inize Cevap";
-                msj1.Body = "Size En kısa zamanda Döneceğiz. Teşekkür Ederiz Bizi tercih ettiğiniz için";
-                client.Send(msj1);
-                ViewBag.Succes = "teşekkürler Mailniz başarı bir şekilde gönderildi"; //Bu kısımlarda ise kullanıcıya bilgi vermek amacı ile olur
-                _messageService.Add(model); 
-                return View();
-            }
-            catch (Exception)
-            {
-                ViewBag.Error = "Mesaj Gönderilirken hata oluştu"; //Bu kısımlarda ise kullanıcıya bilgi vermek amacı ile olur
-                return View();
-            }
-        }
-
-        //Sitedeki Nota adına göre arama cubuğu
-        [HttpPost]
-        public async Task<IActionResult> Search(string search)
-        {
-           List<SearchNote> searches= new List<SearchNote>();
-            var searchNote = await _noteService.GetAll(search);
-
-            foreach (var item in searchNote)
-            {
-
-                searches.Add(new SearchNote()
+                using (var response = await httpClient.GetAsync("https://localhost:7034/api/homes"))
                 {
-                    SearchNoteId=item.NoteId,
-                    SearchNoteTitle=item.Title,
-                    SearchNoteImg=item.NoteImgUrl
-                });
-     
-
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    notes = JsonConvert.DeserializeObject<List<Note>>(apiResponse);
+                }
             }
-            return View("Result", searches);
+            return View(notes);
         }
+
+        public async Task<IActionResult> GetNoteDetailFromRestApi(int noteId)
+        {
+            var note = new Note();
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync($"https://localhost:7034/api/homes/notedetails/{noteId}"))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        note = JsonConvert.DeserializeObject<Note>(apiResponse);
+                    }
+                }
+            }
+            return View(note);
+        }
+        public async Task<IActionResult> GetCategoriesAndNotesFromRestApi(int categoryId)
+        {
+            var notes = new List<Note>();
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync($"https://localhost:7034/api/homes/cat/{categoryId}"))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        notes = JsonConvert.DeserializeObject<List<Note>>(apiResponse);
+                    }
+                }
+            }
+            return View(notes);
+        }
+        public async Task<IActionResult> MailSendFromRestApi(Messages model)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                string apiUrl = "https://localhost:7034/api/homes/mailsend";
+                var jsonContent = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
+                using (var response = await httpClient.PostAsync(apiUrl, jsonContent))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        ViewBag.Succes = "teşekkürler Mailniz başarı bir şekilde gönderildi";
+                    }
+                    else
+                    {
+                        ViewBag.Error = "Mesaj Gönderilirken hata oluştu";
+                        return View();
+                    }
+                }
+            }
+            return View();
+
+        }
+        public async Task<IActionResult> SearchFromRestApi(string search)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var apiUrl = $"https://localhost:7034/api/homes/search/{search}";
+                var jsonContent = new StringContent(JsonConvert.SerializeObject(search), Encoding.UTF8, "application/json");
+                using (var response = await httpClient.PostAsync(apiUrl, jsonContent))
+                {
+                    List<SearchNote> searches = new List<SearchNote>();
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    searches = JsonConvert.DeserializeObject<List<SearchNote>>(apiResponse);
+                    return View("Result", searches);
+                }
+            
+            }
+            
+        }
+        #endregion
+
+
+
+
+
+
     }
 }

@@ -14,7 +14,7 @@
                 {
                     <h5 class="text-danger">@ViewBag.Error</h5>
                 }
-                <form asp-action="MemberAdd" method="post">
+                <form asp-controller="Login" asp-action="MemberAddFromRestApi" method="post">
                     <div class="form-group">
                         <label asp-for="Name"></label>
                         <input asp-for="Name" type="text" class="form-control" placeholder="İsim"

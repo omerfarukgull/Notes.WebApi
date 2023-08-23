@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using Azure;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Notlarim.Business.Abstract;
 using Notlarim.Entities;
 using Notlarim.WebUI.Models;
@@ -24,33 +26,27 @@ namespace Notlarim.WebUI.Controllers
         {
             HttpContext.Session.Clear();
             HttpContext.Session.Remove("usermail");
-            return RedirectToAction("NoteList", "Home");
+            return RedirectToAction("GetNoteFromRestApi", "Home");
         }
-
-      
         [HttpGet]
-        public async Task<IActionResult> UserProfile(int userId)
+        public async Task<IActionResult> GetUserProfileFromRestApi(int userId)
         {
-            var entity = await _memberService.GetById(userId);
-
-            var model = new MemberModel
+            var member = new MemberModel();
+            using (var httpClient = new HttpClient())
             {
-                MemberId = entity.MemberId,
-                Email = entity.Email,
-                Gender = entity.Gender,
-                MemberImageUrl = entity.MemberImageUrl,
-                Name = entity.Name,
-                Password = entity.Password,
-                PhoneNumber = entity.PhoneNumber,
-                SurName = entity.SurName,
-                University= entity.University,
-                Department= entity.Department,
-
-            };
-            return View(model);
-
+                //404 hatası
+                using (var response = await httpClient.GetAsync($"https://localhost:7034/api/Accounts/userprofiles/{userId}"))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
+                        member = JsonConvert.DeserializeObject<MemberModel>(apiResponse);
+                    }
+                }
+            }
+            return View(member);
         }
-       
+
         [HttpGet]
         public async  Task<IActionResult> UserDetails(int userId)
         {

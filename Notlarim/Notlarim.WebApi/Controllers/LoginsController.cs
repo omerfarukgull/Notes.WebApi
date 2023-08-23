@@ -70,7 +70,8 @@ namespace Notlarim.WebApi.Controllers
                 HttpContext.Session.SetString("useruniversity", loginUser.University);
                 HttpContext.Session.SetString("userdeparment", loginUser.Department);
                 HttpContext.Session.SetString("useruserstatu", loginUser.UserStatu);
-                return Ok(new { message = "Admin Giriş Başarılı" }); ;
+                return Ok(new { message = "Admin Giriş Başarılı" }); 
+                
             }
             else
             {
@@ -78,11 +79,11 @@ namespace Notlarim.WebApi.Controllers
             }
            
         }
-        [HttpPost]
+        [HttpPost("MemberAdd")]
         public async Task<IActionResult> MemberAdd(MemberDto memberDto)
         {
-            bool userCheck = _memberService.UserCheckMail(memberDto.Email);
-            if (memberDto != null && userCheck == false)
+            //bool userCheck = _memberService.UserCheckMail(memberDto.Email);
+            if (memberDto != null /*&& userCheck == false*/)
             {
                 var entity = new Member
                 {
@@ -95,7 +96,7 @@ namespace Notlarim.WebApi.Controllers
                     MemberImageUrl = memberDto.MemberImageUrl,
                     University = memberDto.University,
                     Department = memberDto.Department,
-                    UserStatu = "User"
+                    UserStatu = memberDto.UserStatu
                 };
                 _memberService.AddAsync(entity);
                 return Ok(new { message = "Kayıt Başarılı" });

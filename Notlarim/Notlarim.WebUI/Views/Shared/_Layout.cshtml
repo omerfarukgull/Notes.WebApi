@@ -8,7 +8,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
-@*    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Notlarim.WebUI.styles.css" asp-append-version="true" />
@@ -30,10 +29,10 @@
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item  menu-link">
-                    <a class="nav-link menu-a" asp-controller="Home" asp-action="NoteList">Ana Sayfa</a>
+                    <a class="nav-link menu-a" asp-controller="Home" asp-action="GetNoteFromRestApi">Ana Sayfa</a>
                 </li>
                 <li class="nav-item  menu-link">
-                    <a class="nav-link menu-a" asp-controller="Home" asp-action="CategoriesAndNotes">Üniversite Ders Notları</a>
+                    <a class="nav-link menu-a" asp-controller="Home" asp-action="GetCategoriesAndNotesFromRestApi">Üniversite Ders Notları</a>
                 </li>
                 <li class="nav-item  menu-link">
                     <a class="nav-link menu-a" asp-controller="Home" asp-action="About">Hakkımızda</a>
@@ -43,7 +42,7 @@
                 </li>
             </ul>
 
-            <form method="post" asp-action="Search" class="d-flex justify-content-center input-group w-auto ml-auto">
+            <form method="post" asp-action="SearchFromRestApi" class="d-flex justify-content-center input-group w-auto ml-auto">
                 <input type="search" class="form-control rounded" placeholder="Search" id="search" name="search" aria-label="Search"
                        aria-describedby="search-addon" />
                 <span class="input-group-text border-0" id="search-addon">
@@ -59,9 +58,8 @@
                         </a>
                         <span class="caret"></span>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-
-                            <a class="dropdown-item text-dark" asp-controller="Account" asp-action="UserProfile" asp-route-userId="@Context.Session.GetInt32("userıd")">Profil</a>
-                            <a class="dropdown-item text-dark" asp-controller="Note" asp-action="NoteList" >Notlarım</a>
+                            <a class="dropdown-item text-dark" asp-controller="Account" asp-action="GetUserProfileFromRestApi" asp-route-userId="@Context.Session.GetInt32("userid")">Profil</a>
+                            <a class="dropdown-item text-dark" asp-controller="Note" asp-action="GetNoteListFromRestApi" asp-route-userId="@Context.Session.GetInt32("userid")">Notlarım</a>
                             <a class="dropdown-item text-dark" asp-controller="Account" asp-action="LogOut">Çıkış Yap</a>
                         </div>
                     </div>

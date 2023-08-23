@@ -1,0 +1,89 @@
+﻿@model MemberModel
+@{
+    ViewData["Title"] = "GetUserProfileFromRestApi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row m-5">
+    <div class="col-md-4">
+        <div class="profile-img">
+            <img src="~/upload/img/@Model.MemberImageUrl" width="250" height="250" alt="" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="profile-head">
+            <h5>
+                @Model.Name @Model.SurName
+            </h5>
+            <h6>Okul</h6>
+            <p>@Model.University</p>
+            <h6>Bölüm</h6>
+            <p>@Model.Department</p>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <a asp-action="UserDetails" asp-route-userId="@Model.MemberId" class="btn btn-danger">Profile Düzenle</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="profile-work">
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="tab-content profile-tab">
+            <div class="tab-pane fade show active">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label asp-for="MemberId" class="font-weight-bold"></label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.MemberId</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label asp-for="Name" class="font-weight-bold"></label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.Name</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label asp-for="SurName" class="font-weight-bold"></label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.SurName</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label asp-for="Email" class="font-weight-bold"></label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.Email</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label asp-for="PhoneNumber" class="font-weight-bold">Phone</label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.PhoneNumber</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label asp-for="Gender" class="font-weight-bold"></label>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.Gender</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

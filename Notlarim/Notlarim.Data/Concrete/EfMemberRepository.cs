@@ -20,6 +20,13 @@ namespace Notlarim.Data.Concrete
         {
             get { return (NoteContext)context; }
         }
+
+        public async Task<Member> GetByIdUserProfile(int id)
+        {
+            var userProfile = await NoteContext.Members.FirstOrDefaultAsync(m => m.MemberId == id);
+            return userProfile;
+        }
+
         public Member LoginUser(string mail, string password)
         {
 

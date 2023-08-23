@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Note>
+@{
+    ViewData["Title"] = "GetNoteFromRestApi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron jum-img mt-5">
+    <div class="container p-5 mt-5">
+        <h1 class="display-4 jum-h1">Ücretsiz Üniversite Ders Notları</h1>
+        <hr class="my-4">
+        <p>Üniversite Ders Notları, Detaylı Konu Anlatımları ve Özetlerini sizlere sunuyoruz</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 not-link mt-3 text-center">
+                    <a asp-action="GetNoteDetailFromRestApi" asp-route-noteId="@item.NoteId" class="text-dark mt-3"><img src="~/upload/img/@item.NoteImgUrl" width="210" height="100"> <br>@item.Title</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

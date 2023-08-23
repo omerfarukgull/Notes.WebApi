@@ -12,5 +12,6 @@ namespace Notlarim.Data.Abstract
     {
         Member LoginUser(string mail, string password);
         public bool UserCheckMail(string mail);
+        Task<Member> GetByIdUserProfile(int id);
     }
 }

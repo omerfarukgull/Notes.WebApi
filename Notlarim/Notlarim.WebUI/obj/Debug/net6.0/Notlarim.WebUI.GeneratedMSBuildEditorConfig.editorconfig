@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\omerf\OneDrive\Masaüstü\Notlarim\Notlarim.WebUI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Account/UserDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyRGV0YWlscy5jc2h0bWw=
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Account/GetUserProfileFromRestApi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxHZXRVc2VyUHJvZmlsZUZyb21SZXN0QXBpLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Account/UserProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyUHJvZmlsZS5jc2h0bWw=
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Account/UserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Admin/CategoryAdd.cshtml]
@@ -76,6 +76,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/GetCategoriesAndNotesFromRestApi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRDYXRlZ29yaWVzQW5kTm90ZXNGcm9tUmVzdEFwaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/GetNoteDetailFromRestApi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXROb3RlRGV0YWlsRnJvbVJlc3RBcGkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/GetNoteFromRestApi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXROb3RlRnJvbVJlc3RBcGkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/MailSendFromRestApi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYWlsU2VuZEZyb21SZXN0QXBpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Home/NoteDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RlRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -96,16 +112,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTWVtYmVyQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Note/GetNoteListFromRestApi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxHZXROb3RlTGlzdEZyb21SZXN0QXBpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Note/NoteAdd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxOb3RlQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Note/NoteDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxOb3RlRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Note/NoteList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZVxOb3RlTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/omerf/OneDrive/Masaüstü/Notlarim/Notlarim.WebUI/Views/Shared/Components/CategoryCount/Default.cshtml]

@@ -6,6 +6,8 @@ using Notlarim.Business.Abstract;
 using Notlarim.WebUI.Models;
 using System.Security.Claims;
 using Notlarim.Entities;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace Notlarim.WebUI.Controllers
 {
@@ -17,110 +19,121 @@ namespace Notlarim.WebUI.Controllers
         {
             _memberService = memberService;
         }
+
+        #region Web Api İşlemleri
         public IActionResult Login()
         {
             return View();
         }
-        [HttpPost]
-        public async Task<IActionResult> Login(MemberModel loginModel)
+        public async Task<IActionResult> LoginFromRestApi(MemberModel loginModel)
         {
-            var loginUser = _memberService.LoginUser(loginModel.Email, loginModel.Password);
-            if (loginUser != null && loginUser.UserStatu == "User")
-            {
-                var claims = new List<Claim>
-                   {
-                       new Claim(ClaimTypes.Email,loginUser.Email),
-                   };
 
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var authProperties = new AuthenticationProperties();
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
-                HttpContext.Session.SetString("usermail", loginUser.Email);
-                HttpContext.Session.SetString("usernamesurname", loginUser.Name + " " + loginUser.SurName);
-                HttpContext.Session.SetString("username", loginUser.Name);
-                HttpContext.Session.SetString("usersurname", loginUser.SurName);
-                HttpContext.Session.SetString("userphoto", loginUser.MemberImageUrl);
-                HttpContext.Session.SetInt32("userıd", loginUser.MemberId);
-                HttpContext.Session.SetString("userphonenumber", loginUser.PhoneNumber);
-                HttpContext.Session.SetString("usergender", loginUser.Gender);
-                HttpContext.Session.SetString("useruniversity", loginUser.University);
-                HttpContext.Session.SetString("userdeparment", loginUser.Department);
-                HttpContext.Session.SetString("useruserstatu", loginUser.UserStatu);
-                return RedirectToAction("NoteList", "Home");
-            }
-            else if (loginUser != null && loginUser.UserStatu == "Admin")
+            using (var httpClient = new HttpClient())
             {
-                var claims = new List<Claim>
-                   {
-                       new Claim(ClaimTypes.Email,loginUser.Email),
-                   };
+                var apiUrl = "https://localhost:7034/api/logins/Login";
+                var jsonContent = new StringContent(JsonConvert.SerializeObject(loginModel), Encoding.UTF8, "application/json");
+                using (var response = await httpClient.PostAsync(apiUrl, jsonContent))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var loginUser = _memberService.LoginUser(loginModel.Email, loginModel.Password);
+                        if (loginUser.UserStatu == "Admin")
+                        {
+                            var claims = new List<Claim>
+                            {
+                                  new Claim(ClaimTypes.Email,loginUser.Email),
+                            };
 
-                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var authProperties = new AuthenticationProperties();
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-                HttpContext.Session.SetString("usermail", loginUser.Email);
-                HttpContext.Session.SetString("usernamesurname", loginUser.Name + " " + loginUser.SurName);
-                HttpContext.Session.SetString("username", loginUser.Name);
-                HttpContext.Session.SetString("usersurname", loginUser.SurName);
-                HttpContext.Session.SetString("userphoto", loginUser.MemberImageUrl);
-                HttpContext.Session.SetInt32("userıd", loginUser.MemberId);
-                HttpContext.Session.SetString("userphonenumber", loginUser.PhoneNumber);
-                HttpContext.Session.SetString("usergender", loginUser.Gender);
-                HttpContext.Session.SetString("useruniversity", loginUser.University);
-                HttpContext.Session.SetString("userdeparment", loginUser.Department);
-                HttpContext.Session.SetString("useruserstatu", loginUser.UserStatu);
-                return RedirectToAction("Index", "Admin");
-            }
-            else
-            {
+                            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                            var authProperties = new AuthenticationProperties();
+                            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+                            HttpContext.Session.SetString("usermail", loginUser.Email);
+                            HttpContext.Session.SetString("usernamesurname", loginUser.Name + " " + loginUser.SurName);
+                            HttpContext.Session.SetString("username", loginUser.Name);
+                            HttpContext.Session.SetString("usersurname", loginUser.SurName);
+                            HttpContext.Session.SetString("userphoto", loginUser.MemberImageUrl);
+                            HttpContext.Session.SetInt32("userid", loginUser.MemberId);
+                            HttpContext.Session.SetString("userphonenumber", loginUser.PhoneNumber);
+                            HttpContext.Session.SetString("usergender", loginUser.Gender);
+                            HttpContext.Session.SetString("useruniversity", loginUser.University);
+                            HttpContext.Session.SetString("userdeparment", loginUser.Department);
+                            HttpContext.Session.SetString("useruserstatu", loginUser.UserStatu);
+
+                            return RedirectToAction("Index", "Admin");
+                        }
+                        else if (loginUser.UserStatu == "User")
+                        {
+                            var claims = new List<Claim>
+                            {
+                                  new Claim(ClaimTypes.Email,loginUser.Email),
+                            };
+
+                            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                            var authProperties = new AuthenticationProperties();
+                            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+                            HttpContext.Session.SetString("usermail", loginUser.Email);
+                            HttpContext.Session.SetString("usernamesurname", loginUser.Name + " " + loginUser.SurName);
+                            HttpContext.Session.SetString("username", loginUser.Name);
+                            HttpContext.Session.SetString("usersurname", loginUser.SurName);
+                            HttpContext.Session.SetString("userphoto", loginUser.MemberImageUrl);
+                            HttpContext.Session.SetInt32("userid", loginUser.MemberId);
+                            HttpContext.Session.SetString("userphonenumber", loginUser.PhoneNumber);
+                            HttpContext.Session.SetString("usergender", loginUser.Gender);
+                            HttpContext.Session.SetString("useruniversity", loginUser.University);
+                            HttpContext.Session.SetString("userdeparment", loginUser.Department);
+                            HttpContext.Session.SetString("useruserstatu", loginUser.UserStatu);
+                            return RedirectToAction("GetNoteFromRestApi", "Home");
+                        }
+                    }
+                }
                 ViewBag.Error = "Mail adresiniz veya Şifreniz hatalı";
+                return View("Login", loginModel);
             }
-            return View(loginModel);
         }
 
-        [HttpGet]
         public IActionResult MemberAdd()
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult MemberAdd(MemberModel memberModel)
+        public async Task<IActionResult> MemberAddFromRestApi(MemberModel model)
         {
-            bool userCheck = _memberService.UserCheckMail(memberModel.Email);
-            if (memberModel != null && userCheck == false)
+            bool userCheck = _memberService.UserCheckMail(model.Email);
+
+            if (userCheck)
             {
-                if (memberModel.Gender == "kadın")
+                ViewBag.Error = "Bu e-posta adresi zaten kullanımda.";
+                return View("MemberAdd", model);
+            }
+
+            using (var httpClient = new HttpClient())
+            {
+                if (model.Gender == "kadın")
                 {
-                    memberModel.MemberImageUrl = "bayan-user.png";
+                    model.MemberImageUrl = "bayan-user.png";
+                    model.UserStatu = "User";
                 }
                 else
                 {
-                    memberModel.MemberImageUrl = "erkek-user.jpeg";
+                    model.MemberImageUrl = "erkek-user.jpeg";
+                    model.UserStatu = "User";
                 }
-                var entity = new Member
+                var apiUrl = "https://localhost:7034/api/logins/MemberAdd";
+                var jsonContent = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
+                using (var response = await httpClient.PostAsync(apiUrl, jsonContent))
                 {
-                    Name = memberModel.Name,
-                    SurName = memberModel.SurName,
-                    Email = memberModel.Email,
-                    Password = memberModel.Password,
-                    PhoneNumber = memberModel.PhoneNumber,
-                    Gender = memberModel.Gender,
-                    MemberImageUrl = memberModel.MemberImageUrl,
-                    University = memberModel.University,
-                    Department = memberModel.Department,
-                    UserStatu = "User"
-                };
-
-                _memberService.Add(entity);
-                return RedirectToAction(nameof(Login));
-            }
-            else
-            {
-                ViewBag.Error = "Bu e-posta adresi zaten kullanımda.";
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction(nameof(Login));
+                    }
+                }
 
             }
-            return View(memberModel);
+            ViewBag.Error = "Bilinmeyen bir hata oluştu.";
+            return View("MemberAdd", model);
         }
+        #endregion
+
     }
 }

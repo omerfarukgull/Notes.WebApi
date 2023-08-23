@@ -16,29 +16,14 @@ namespace Notlarim.WebApi.Controllers
             _memberService = memberService;
         }
 
-        [HttpGet("userprofile")]
-        public async Task<IActionResult> UserProfile()
+        [HttpGet("userprofiles/{userId}")]
+        public async Task<IActionResult> UserProfiles(int userId)
         {
-            var userId = HttpContext.Session.GetInt32("userıd");
-            var entity = await _memberService.GetById((int)userId);
-
-            var model = new MemberDto
-            {
-                MemberId = entity.MemberId,
-                Email = entity.Email,
-                Gender = entity.Gender,
-                MemberImageUrl = entity.MemberImageUrl,
-                Name = entity.Name,
-                Password = entity.Password,
-                PhoneNumber = entity.PhoneNumber,
-                SurName = entity.SurName,
-                University = entity.University,
-                Department = entity.Department,
-                UserStatu=entity.UserStatu,
-
-            };
-            return Ok(model);
+            var entity = await _memberService.GetById(userId);
+            return Ok(entity);
         }
+
+
         [HttpPut("userupdate")]
         public async Task<IActionResult> UserUpdate(MemberDto memberModel)// IFormFile file
         {

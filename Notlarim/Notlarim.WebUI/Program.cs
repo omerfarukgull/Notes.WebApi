@@ -40,8 +40,8 @@ builder.Services.AddAuthentication(
     .AddCookie(x =>
     {
         x.Cookie.Name = "test";
-        x.LoginPath = "/Login/Login";
-        x.AccessDeniedPath = "/Login/Login";
+        x.LoginPath = "/Login/LoginFromRestApi";
+        x.AccessDeniedPath = "/Login/LoginFromRestApi";
     }
     );
 
@@ -70,6 +70,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=NoteList}/{id?}");
+    pattern: "{controller=Home}/{action=GetNoteFromRestApi}/{id?}");
 
 app.Run();

@@ -1,0 +1,50 @@
+﻿@model Note
+@{
+    ViewData["Title"] = "GetNoteDetailFromRestApi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    bool isLoggedIn = Context.Session.GetString("usermail") != null;
+}
+<style>
+    .blocked-link {
+        pointer-events: none;
+        cursor: default;
+    }
+</style>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <img src="~/upload/img/@Model.NoteImgUrl" width="1120" height="600px" alt="">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 mt-3">
+        <span>@Model.CreatDate.ToString("dd.MM.yyyy") - <a asp-action="GetCategoriesAndNotesFromRestApi" asp-route-categoryId="@Model.CategoryId">@Model.Category.CategoryName</a> - @Model.Member.Name @Model.Member.SurName  </span>
+        <h2>@Model.Title</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <p>@Model.Content</p>
+    </div>
+</div>
+<div class="row">
+    @if (isLoggedIn)
+    {
+        <div class="col-md-12">
+            <a href="~/upload/pdf/@Model.NotePdfUrl" target="_blank">Notu İndir</a>
+        </div>
+    }
+    else
+    {
+        <div class="col-md-12">
+            <a href="~/Login/Login">Notu İndir</a>
+        </div>
+    }
+</div>
+
+
+

@@ -17,11 +17,11 @@ namespace Notlarim.WebApi.Controllers
             _noteService = noteService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetProducts()
+        [HttpGet("GetProducts/{userId}")]
+        public async Task<IActionResult> GetProducts(int userId)
         {
-            var userId = HttpContext.Session.GetInt32("userıd");
-            var noteList = await _noteService.UserNotes((int)userId);
+            //var userId = HttpContext.Session.GetInt32("userıd");
+            var noteList = await _noteService.UserNotes(userId);
             return Ok(noteList);
         }
         [HttpGet("{id}")]

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 using Notlarim.Business.Abstract;
 using Notlarim.Entities;
 using Notlarim.WebUI.Models;
@@ -20,14 +21,14 @@ namespace Notlarim.WebUI.Controllers
     
         }
 
-        #region Note İşlemeleri
-        // Kullanıcıya ait noteları listeler
-        public async Task<IActionResult> NoteList()
-        {
-            var userId = HttpContext.Session.GetInt32("userıd");
-            var noteList =await _noteService.UserNotes((int)userId);
-            return View(noteList);
-        }
+        #region Note Web Uı İşlemeleri
+        //// Kullanıcıya ait noteları listeler
+        //public async Task<IActionResult> NoteList(int userId)
+        //{
+        //    //var userId = HttpContext.Session.GetInt32("userıd");
+        //    var noteList =await _noteService.UserNotes((int)userId);
+        //    return View(noteList);
+        //}
 
         [HttpGet]
         public async Task<IActionResult> NoteAdd()
@@ -156,5 +157,24 @@ namespace Notlarim.WebUI.Controllers
         }
         #endregion
 
+        #region Not Web APİ İşleşeri
+        // Kullanıcıya ait noteları listeler
+        public async Task<IActionResult> GetNoteListFromRestApi(int userId)
+        {
+            var noteList = new List<Note>();
+            using (var httpClint = new HttpClient())
+            {
+                using (var response = await httpClint.GetAsync($"https://localhost:7034/api/notes/GetProducts/{userId}"))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var apiResponse = await response.Content.ReadAsStringAsync();
+                        noteList = JsonConvert.DeserializeObject<List<Note>>(apiResponse);
+                    }
+                }
+            }
+            return View(noteList);
+        }
+        #endregion
     }
 }
